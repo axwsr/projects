@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Soft Barber</title>
+  <!-- loader-->
+  <link href="assets/css/pace.min.css" rel="stylesheet" />
+  <script src="assets/js/pace.min.js"></script>
+  <!--favicon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <!-- simplebar CSS-->
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+  <!-- Bootstrap core CSS-->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- animate CSS-->
+  <link href="assets/css/animate.css" rel="stylesheet" type="text/css" />
+  <!-- Icons CSS-->
+  <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+  <!-- Sidebar CSS-->
+  <link href="assets/css/sidebar-menu.css" rel="stylesheet" />
+  <!-- Custom Style-->
+  <link href="assets/css/app-style.css" rel="stylesheet" />
+  <script src="assets/js/layouts/menuBarber.js" defer></script>
+
+</head>
+
+<body class="bg-theme bg-theme1">
+
+  <!-- start loader -->
+  <div id="pageloader-overlay" class="visible incoming">
+    <div class="loader-wrapper-outer">
+      <div class="loader-wrapper-inner">
+        <div class="loader"></div>
+      </div>
+    </div>
+  </div>
+  <!-- end loader -->
+
+  <!-- Start wrapper-->
+  <div id="wrapper">
+    <div id="menuB"></div>
+    <!--Start topbar header-->
+    <header class="topbar-nav">
+      <nav class="navbar navbar-expand fixed-top row">
+        <ul class="col navbar-nav mr-auto align-items-center">
+          <li class="col nav-item">
+            <a class="nav-link toggle-menu" href="javascript:void();">
+              <i class="icon-menu menu-icon"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="col navbar-nav mr-auto align-items-center justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+              <span class="user-profile"><img
+                  src="https://cdn3d.iconscout.com/3d/premium/thumb/profile-8748595-7190777.png" class="img-circle"
+                  alt="user avatar"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right ">
+              <li class="dropdown-item user-details">
+                <a href="javaScript:void();">
+                  <div class="media">
+                    <div class="avatar"><img class="align-self-start mr-3"
+                        src="https://cdn3d.iconscout.com/3d/premium/thumb/profile-8748595-7190777.png"
+                        alt="user avatar"></div>
+                    <div class="media-body">
+                      <h6 class="mt-2 user-title">Sarajhon Mccoy</h6>
+                      <p class="user-subtitle">mccoy@example.com</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li class="dropdown-item"><a href="profile.html" class="enlaceEditar"><i
+                    class="fa-solid fa-user mr-2"></i> Mi perfíl</a></li>
+              <li class="dropdown-divider"></li>
+              <li id="logoutt" class="dropdown-item"><i class="icon-power mr-2"></i> Cerrar sesión</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--End topbar header-->
+
+    <div class="clearfix"></div>
+
+    <div class="content-wrapper">
+      <div class="container-fluid">
+
+        <div class="row mt-3">
+
+
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body">
+                <ul class="nav nav-tabs nav-tabs-primary top-icon nav-justified">
+                  <li class="nav-item">
+                    <a href="javascript:void();" data-target="#edit" data-toggle="pill" class="nav-link active"><i
+                        class="icon-user"></i> <span class="hidden-xs">Profile</span></a>
+                  </li>
+                </ul>
+                <div class="tab-content p-3">
+                  <div class="tab-pane active" id="messages">
+                    <div class="tab-pane " id="edit">
+                      <form id="formEditUser">
+                        <div class="form-group row">
+                          <label class="col-lg-3 col-form-label form-control-label">Correo</label>
+                          <div class="col-lg-9">
+                            <input class="form-control" name="correo" id="inputCorreo" type="text">
+                          </div>
+                        </div>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="switchContrasenia">
+                          <label class="custom-control-label" for="switchContrasenia">Cambiar Contraseña</label>
+                        </div>
+
+                        <div class="ocultar" id="contContrasenia">
+                          
+                          <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Contraseña actual</label>
+                            <div class="position-relative has-icon-right col-lg-9">
+                              <input class="form-control" id="inputContraseniaActual" name="contraActual"
+                                type="password">
+                              <div class="form-control-position">
+                                <i id="icon_eyeCurrent" class="fa-regular fa-eye-slash"></i>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Nueva contraseña</label>
+                            <div class="position-relative has-icon-right col-lg-9">
+                              <input class="form-control" id="inputContrasenia" type="password" name="contrasenia">
+                              <div class="form-control-position">
+                                <i id="icon_eyeNew" class="fa-regular fa-eye-slash"></i>
+                              </div>
+                            </div>
+                          </div>
+
+                        <p id="textoError"></p>
+                        <button class="btn btn-primary col-12 mt-3" id="btnEditar">Editar</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!--start overlay-->
+          <div class="overlay toggle-menu"></div>
+          <!--end overlay-->
+
+        </div>
+        <!-- End container-fluid-->
+      </div><!--End content-wrapper-->
+      <!--Start Back To Top Button-->
+      <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+      <!--End Back To Top Button-->
+
+      <!--Start footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="text-center">
+            Copyright © 2018 Dashtreme Admin
+          </div>
+        </div>
+      </footer>
+      <!--End footer-->
+
+      <!--start color switcher-->
+      <div class="right-sidebar">
+        <div class="switcher-icon">
+          <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+        </div>
+        <div class="right-sidebar-content">
+
+          <p class="mb-0">Gaussion Texture</p>
+          <hr>
+
+          <ul class="switcher">
+            <li id="theme1"></li>
+            <li id="theme2"></li>
+            <li id="theme3"></li>
+            <li id="theme4"></li>
+            <li id="theme5"></li>
+            <li id="theme6"></li>
+          </ul>
+
+          <p class="mb-0">Gradient Background</p>
+          <hr>
+
+          <ul class="switcher">
+            <li id="theme7"></li>
+            <li id="theme8"></li>
+            <li id="theme9"></li>
+            <li id="theme10"></li>
+            <li id="theme11"></li>
+            <li id="theme12"></li>
+            <li id="theme13"></li>
+            <li id="theme14"></li>
+            <li id="theme15"></li>
+          </ul>
+
+        </div>
+      </div>
+      <!--end color switcher-->
+
+    </div><!--End wrapper-->
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/users/editMyInfo.js"></script>
+    <!-- simplebar js -->
+    <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+    <!-- sidebar-menu js -->
+    <script src="assets/js/sidebar-menu.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="assets/js/app-script.js"></script>
+    <script src="assets/js/oauth/logout.js"></script>
+
+</body>
+
+</html>
